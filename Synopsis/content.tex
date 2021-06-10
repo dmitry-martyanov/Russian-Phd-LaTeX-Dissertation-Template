@@ -24,8 +24,8 @@
 %\textbf{ХХХ}~страниц текста с~\textbf{ХХ}~рисунками и~5~таблицами. Список
 %литературы содержит \textbf{ХХX}~наименование.
 
-\pdfbookmark{Содержание работы}{description}                          % Закладка pdf
-\section*{Содержание работы}
+\pdfbookmark{Основная часть}{description}                          % Закладка pdf
+\section*{Основная часть}
 Во \underline{\textbf{введении}} обосновывается актуальность
 исследований, проводимых в~рамках данной диссертационной работы,
 приводится обзор научной литературы по~изучаемой проблеме,
@@ -65,14 +65,18 @@
 \verb!Synopsis/setup.tex! необходимо присвоить положительное значение
 счётчику \verb!\setcounter{usefootcite}{1}!. В таком случае ссылки на
 работы других авторов будут подстрочными.
-Изложенные в третьей главе результаты опубликованы в~\cite{vakbib1, vakbib2}.
+Изложенные в третьей главе результаты опубликованы в~\cite{Quesada2017, Martyanov2017a}.
 Использование подстрочных ссылок внутри таблиц может вызывать проблемы.
 
 В \underline{\textbf{четвертой главе}} приведено описание
 
 \FloatBarrier
-\pdfbookmark{Заключение}{conclusion}                                  % Закладка pdf
-В \underline{\textbf{заключении}} приведены основные результаты работы, которые заключаются в следующем:
+
+
+\pdfbookmark{Заключение}{conclusion}                          % Закладка pdf
+\section*{Заключение}
+
+
 \input{common/concl}
 
 \pdfbookmark{Литература}{bibliography}                                % Закладка pdf
@@ -93,29 +97,30 @@
     %  * Если не соблюдать порядок "как для \printbibliography", нумерация в `\insertbiblioauthor` будет кривой.
     %  * Если цитировать каждый источник отдельной командой --- найти некоторые ошибки будет проще.
     %
-    %% authorvak
-    \nocite{vakbib1}%
-    \nocite{vakbib2}%
-    %
-    %% authorwos
-    \nocite{wosbib1}%
-    %
-    %% authorscopus
-    \nocite{scbib1}%
-    %
-    %% authorpathent
-    \nocite{patbib1}%
-    %
-    %% authorprogram
-    \nocite{progbib1}%
-    %
-    %% authorconf
-    \nocite{confbib1}%
-    \nocite{confbib2}%
-    %
-    %% authorother
-    \nocite{bib1}%
-    \nocite{bib2}%
+    \nocite{*}
+%    %% authorvak
+%    vakbib2{vakbib1}%
+%    vakbib2{vakbib2}%
+%    %
+%    %% authorwos
+%    vakbib2{wosbib1}%
+%    %
+%    %% authorscopus
+%    \nocite{scbib1}%
+%    %
+%    %% authorpathent
+%    \nocite{patbib1}%
+%    %
+%    %% authorprogram
+%    \nocite{progbib1}%
+%    %
+%    %% authorconf
+%    \nocite{confbib1}%
+%    \nocite{confbib2}%
+%    %
+%    %% authorother
+%    \nocite{bib1}%
+%    \nocite{bib2}%
 
     \ifnumgreater{\value{usefootcite}}{0}{
         \begin{refcontext}[labelprefix={}]

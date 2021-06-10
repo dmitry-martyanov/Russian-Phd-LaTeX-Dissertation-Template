@@ -1,0 +1,178 @@
+\chapter{Матричные элементы деформационных операторов в модели мягкого ротатора для четно-четных и нечетных актинидов}
+
+\section{Основные положения модели мягкого ротатора}
+
+Модель мягкого ротатора, описанная в работах~\cite{SRM1,SRM2} --- это модель колллективных состояний четно-четного ядра с деформациями вплоть до гексадекапольных и учетом аксиальных и неаксиальных квадрупольных, а также октупольных колебаний поверхности. Форма такого ядра во внутренней (связанной с ядром) системе отчета, связанной с ядром, может быть представлена~\cite{BohrBookRus,DavydovBookRus} с помощью разложения по сферическим функциям:
+
+\begin{eqnarray}
+R(\theta ^{\prime },\varphi ^{\prime })~ &=&~R_{0}r_{\beta }(\theta ^{\prime
+},\varphi ^{\prime })  \notag \\
+&=&~R_{0}\left\{ 1+\sum_{\lambda \mu }\beta _{\lambda \mu }Y_{\lambda \mu
+}(\theta ^{\prime },\varphi ^{\prime })\right\}  \notag \\
+&=&~R_{0}\left\{ 1+\beta _{2}\left[ \cos \gamma Y_{20}(\theta ^{\prime
+},\varphi ^{\prime })+\frac{1}{\sqrt{2}}\sin \gamma \left( Y_{22}(\theta
+^{\prime },\varphi ^{\prime })+Y_{2-2}(\theta ^{\prime },\varphi ^{\prime
+})\right) \right] \right.  \notag \\
+&&~+\beta _{3}\left[ \cos \eta Y_{30}(\theta ^{\prime },\varphi ^{\prime })+%
+\frac{1}{\sqrt{2}}\sin \eta \left( Y_{32}(\theta ^{\prime },\varphi ^{\prime
+})+Y_{3-2}(\theta ^{\prime },\varphi ^{\prime })\right) \right]  \notag \\
+&&~\left. +b_{40}Y_{40}(\theta ^{\prime },\varphi ^{\prime })+\sum_{\mu
+=2,4}b_{4\mu }\left( Y_{4\mu }(\theta ^{\prime },\varphi ^{\prime
+})+Y_{4-\mu }(\theta ^{\prime },\varphi ^{\prime })\right) \right\} .
+\label{eq:radiusSRM}
+\end{eqnarray}
+%
+Здесь использовано приближение 
+\begin{equation}
+\beta _{3\pm 1}~=~\beta _{3\pm 3}~=~0,~\beta _{32}~=~\beta _{3-2},
+\end{equation}%
+%
+которое считается допустимым при рассмотрении низших октупольных возбуждений ядра~\cite{LipasDavidson1961}.
+
+Гамильтониан модели в предположении независимых $\gamma$-, $\beta_2$-, $\beta_3$-колебаний представим в следующем виде:
+%
+\begin{equation}
+\hat{H}=\frac{\hbar ^{2}}{2B_{2}}\left\{ \hat{T}_{\beta _{2}}+\frac{1}{\beta
+_{2}^{2}}\hat{T}_{\gamma }\right\} +\frac{\hbar ^{2}}{2}\hat{T}_{r}+\frac{%
+\hbar ^{2}}{2B_{3}}\hat{T}_{\beta _{3}}+\frac{\beta _{20}^{4}}{\beta _{2}^{2}%
+}V(\gamma )+V(\beta _{2})+V(\beta _{3}),  \label{eq:hamSRM}
+\end{equation}%
+%
+где 
+\begin{eqnarray}
+\hat{T}_{\beta _{2}} &=&-\frac{1}{\beta _{2}^{4}}\frac{\partial }{\partial
+\beta _{2}}\left( \beta _{2}^{4}\frac{\partial }{\partial \beta _{2}}\right)
+, \\
+\hat{T}_{\gamma } &=&-\frac{1}{\sin 3\gamma }\frac{\partial }{\partial
+\gamma }\left( \sin 3\gamma \frac{\partial }{\partial \gamma }\right) , \\
+\hat{T}_{\beta _{3}} &=&-\frac{1}{\beta _{3}^{3}}\frac{\partial }{\partial
+\beta _{3}}\left( \beta _{3}^{3}\frac{\partial }{\partial \beta _{3}}\right), \\
+\hat{T}_{r} &=& \sum_{i=1}^{3}\frac{\hat{I}_{i}^{2}}{J_{i}}~=~\sum_{i=1}^{3}%
+\frac{\hat{I}_{i}^{2}}{J_{i}^{(2)}+J_{i}^{(3)}+J_{i}^{(4)}}.
+\end{eqnarray}
+
+Здесь, $J_{i}^{(\lambda )}$ --- главные моменты инерции ядрая в напрвлении $i$-той оси в связанной системе координат, соответствующие деформациям с мультипольностями $\lambda =2$, 3 и 4, зависящие от величин соответствующих деформаций, а $\hat{I}_{i}$ --- проекция оператора углового момента на $i$-тую ось, $\beta_{20}$ ---
+величина равновесной квадрупольной деформации в основном состоянии ядра, $B_{\lambda }$ ---
+массовый параметр для мультипольности $\lambda$. Собственные функции гамильтониана \ref{eq:hamSRM}
+определены в пространстве шести динамических переменных: $0\leq \beta _{2}<\infty $, 
+$-\infty <\beta _{3}<\infty $, $\frac{n\pi }{3}\leq \gamma \leq \frac{%
+(n+1)\pi }{3}$, $0\leq \theta _{1}\leq 2\pi $, $0\leq \theta _{2}\leq \pi $
+и $0\leq \theta _{3}<2\pi $ с элементом объема $d\tau =\beta
+_{2}^{4}\beta _{3}^{3}|\sin 3\gamma |d\beta _{2}d\beta _{3}d\gamma d\theta
+_{1}\sin \theta _{2}d\theta _{2}d\theta _{3}$. Ядро считается жестким для поперечных квадрупольных и гексадекапольных деформаций.
+
+Потенциалы для $\gamma$- и $\beta_2$- полагаются такими, чтобы вместе с центробежными членами давать квадратичные минимумы в точках $\gamma_0$ и $\beta_{20}$, соответственно, а октупольный потенциал ---
+в виде симметричного двойного квадратичного потенциала с минимумами в точках $\beta_{30}$ и  $-\beta_{30}$ и барьером между ними (обоснование такого выбора потенциала можно найти, например, в~\cite{Strutunsky1956}).
+
+Раскладывая оператор кинетической энергии вращения $\hat{T}_r$ в ряд Тейлора по динамическим переменным около минимума потенциала (точки $\gamma_0$, $\beta_{20}$ и $\pm\beta_{30}$), можно в нулевом порядке получить решение уравнения Шредингера в методом разделения переменных, а поправки учесть по теории возмущений. При этом решение нулевого порядка уже учитывает аксильное квадрупольное растяжение ядра при вращении и квадрупольную неаксиальность, а части волновой функции, описывающие вращение, $\beta_2$-, $\beta_3$- и $\gamma$-колебания факторизованы: 
+
+\begin{eqnarray}
+\Omega _{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta _{2}}}^{\pm }~
+&=&~C_{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta _{2}}}^{\pm }
+\frac{\beta _{2}^{-2}\beta _{3}^{-3/2}}{\sqrt{%
+\sin 3\gamma }}\sum_{K\geq 0}\left\vert IMK,\pm \right\rangle A_{IK}^{\tau }
+\nonumber \\
+&&\times D_{\nu _{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta _{2}}}^{\pm }} 
+\left[ \frac{\sqrt{2}}{\beta _{20}\mu _{I\tau n_{\gamma }n_{\beta
+_{3}}n_{\beta _{2}}}^{\pm }}\left( \beta _{2}-\beta _{2_{I\tau n_{\gamma
+}n_{\beta _{3}}}}^{\pm }\right) \right]  \nonumber \\
+&&\times v_{n_{\gamma }}\left[ \frac{\sqrt{2}}{\mu _{\gamma _{0}}}(\gamma
+-\gamma _{0})\right] \left[ \chi _{n_{\beta _{3}}}(\tau _{\epsilon }^{+})\pm
+\chi _{n_{\beta _{3}}}(\tau _{\epsilon }^{-})\right],  \label{eq:wfSRM}
+\end{eqnarray}%
+%
+а энергии состояний:
+
+\begin{eqnarray}
+E_{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta _{2}}}^{\pm }~ &=&~\hbar \omega
+_{0}\left\{ \left( \nu^{\pm} _{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta
+_{2}}}+1/2\right) \times \left( 4-3/P_{I\tau n_{\gamma }n_{\beta _{3}}}^{\pm
+}\right) ^{1/2}\right.  \nonumber \\
+&&~+\frac{1}{2}\frac{\mu _{\beta _{20}}^{2}}{P_{I\tau n_{\gamma }n_{\beta
+_{3}}}^{\pm 2}}\left[ \frac{2}{\mu _{\gamma _{0}}^{2}}(\nu _{n_{\gamma
+}}-\nu _{0_{\gamma }})+\varepsilon _{I\tau }^{\pm }+\epsilon _{n_{\beta
+_{3}}}^{\pm }-\epsilon _{0_{\beta _{3}}}^{+}\right]  \nonumber \\
+&&~\left. +\frac{1}{2}\frac{\mu _{\beta _{20}}^{6}}{P_{I\tau n_{\gamma
+}n_{\beta _{3}}}^{\pm 6}}\left[ \frac{2}{\mu _{\gamma _{0}}^{2}}(\nu
+_{n_{\gamma }}-\nu _{0_{\gamma }})+\varepsilon _{I\tau }^{\pm }+\epsilon
+_{n_{\beta _{3}}}^{\pm }-\epsilon _{0_{\beta _{3}}}^{+}\right] ^{2}\right\} ,
+\label{eq:enSRM}
+\end{eqnarray}%
+%
+где $P_{I\tau n_{\gamma }n_{\beta _{3}}}^{\pm }$ --- корень уравнения
+\begin{equation}
+\left( P_{I\tau n_{\gamma }n_{\beta _{3}}}^{\pm }-1\right) P_{I\tau
+n_{\gamma }n_{\beta _{3}}}^{\pm 3}=\mu _{\beta _{20}}^{\pm 4}\left[ \frac{2}{%
+\mu _{\gamma _{0}}^{2}}(\nu _{n_{\gamma }}-\nu _{0_{\gamma }})+\varepsilon
+_{I\tau }^{\pm }+\epsilon _{n_{\beta _{3}}}^{\pm }-\epsilon _{0_{\beta
+_{3}}}^{+}\right] ,
+\end{equation}%
+\begin{equation}
+\beta _{2_{I\tau n_{\gamma }n_{\beta _{3}}}}^{\pm }~=~\beta _{20}P_{I\tau
+n_{\gamma }n_{\beta _{3}}}^{\pm },
+\end{equation}%
+\begin{equation}
+\frac{1}{\mu _{\beta _{2_{I\tau n_{\gamma }n_{\beta _{3}}}}}^{\pm 4}}~=~%
+\frac{1}{\mu _{\beta _{20}}^{4}}+\frac{3\left[ \frac{2}{\mu _{\gamma
+_{0}}^{2}}\left( \nu _{n_{\gamma }}-\nu _{0_{\gamma }}\right) +\varepsilon
+_{I\tau }^{\pm }+\epsilon _{n_{\beta _{3}}}^{\pm }-\epsilon _{0_{\beta
+_{3}}}^{\pm }\right] }{P_{I\tau n_{\gamma }n_{\beta _{3}}}^{\pm }}.
+\end{equation}
+
+
+Величины $\varepsilon _{I\tau }^{\pm}(\gamma_0)$ и $\Phi _{IM\tau }^{\pm }(\Theta )~=~\sum_{K\geq 0}\left\vert IMK,\pm
+\right\rangle A_{IK}^{\tau }$ --- это собственные значения и собственные функции жесткого асимметричного ротатора \cite{DavydovBook} со спином $I$ и его проекциями на оси лабораторной системы координат и ядра $M$ и $K$ и четностью $\pm1$, соответственно; с оператором $\hat{T}_r$ в нулевом приближении в качестве гамильтониана, а
+%
+\begin{equation}
+\left\vert IMK,\pm \right\rangle = \sqrt{\frac{(2I+1)}{(16\pi ^{2}(1+\delta
+_{K0})))}}\left[ D_{MK}^{I}(\Theta)\pm (-1)^{I}D_{M-K}^{I}(\Theta)%
+\right],  \label{rotaxial}
+\end{equation}%
+%
+здесь $A_{IK}^{\tau }$ --- константы, завясящие от $\gamma_0$, $D_{MK}^{I}(\Theta)$ --- матрицы конечных вращений (собственные функции оператора углового момента).
+
+
+
+\begin{equation}
+\left\{ 
+\begin{array}{l}
+{\displaystyle v_{\nu _{n_{\gamma }}}\left[ -\frac{\sqrt{2}}{\mu _{\gamma
+_{0}}}\left( \frac{\pi }{3}n-\gamma _{0}\right) \right] ~=~0} \\ 
+{\displaystyle v_{\nu _{n_{\gamma }}}\left[ -\frac{\sqrt{2}}{\mu _{\gamma
+_{0}}}\left( \frac{\pi }{3}(n+1)-\gamma _{0}\right) \right] ~=~0}%
+\end{array}%
+\right. ,  \label{eq:bc}
+\end{equation}%
+
+\begin{equation}
+\left[ \frac{d^{2}}{dy^{2}}+\nu _{n_{\gamma }}+\frac{1}{2}-\frac{y^{2}}{4}%
+\right] v_{n_{\gamma }}~=~0,  \label{eq:ngamma}
+\end{equation}%
+
+\begin{equation}
+D_{\nu _{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta _{2}}}^{\pm }}\left[ -\frac{%
+\sqrt{2}P_{I\tau n_{\gamma }n_{\beta _{3}}}^{\pm }}{\mu _{\beta _{20}}}%
+\left( 4-\frac{3}{P_{I\tau n_{\gamma }n_{\beta _{3}}}^{\pm }}\right) \right]
+~=~0.  \label{eq:bc1}
+\end{equation}%
+
+$C_{I\tau n_{\gamma }n_{\beta _{3}}n_{\beta _{2}}}^{\pm }$ --- нормировочная константа, 
+
+В результате такая модель описывает все основные типы низкоэнергетических возбужденных состояний четно-четного мягкого деформированного ядра, а именно уровни следующих вращательных полос:
+\begin{itemize}
+    \item основной (построенной на основном состоянии ядра), последовательность спинов/четностей $I^\pi=0^+, 2^+, 4^+, 6^+\dots, K=0$;
+    \item построенной на $\beta_2$-колебании ядра (с энергией $\approx$ 1~МэВ), последовательность спинов/четностей $I^\pi=0^+, 2^+, 4^+, 6^+\dots, K=0$;
+    \item построенной на $\gamma$-колебании ядра (с энергией $\approx$ 1~МэВ), последовательность спинов/четностей $I^\pi=0^+, 2^+, 4^+, 6^+\dots, K=0$;
+    \item аномальной (неаксиальной) вращательной полосы, с ненулевой проекцией спина на ось ядра (в теориях с $\gamma_0=0$ эта полоса возникает из-за динамической неаксиальности даже в отсутствии $\gamma$-колебаний и называется первой $\gamma$-полосой), последовательность спинов/четностей $I^\pi= 2^+, 3^+, 4^+, 5^+\dots, K=2$;
+    \item построенной на первом октупольном возбужденном состоянии (нечетном) ядра, последовательность спинов/четностей $I^\pi=1^-, 3^-, 5^-, 7^-\dots, K=0$.
+\end{itemize}
+
+\section{Нечетные ядра}
+
+\section{Процедура получения параметров гамильтониана модели мягкого ротатора }
+
+\section{Выбор ядер актинидов с достаточным известным числом уровней}
+
+\section{Параметры гамильтониана выбранных ядер}
+
+\section{Матричные элементы операторов деформаций в модели мягкого ротатора}

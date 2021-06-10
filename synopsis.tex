@@ -44,6 +44,9 @@
 \mainmatter*                  % Нумерация страниц не изменится, но начнётся с новой страницы
 \input{Synopsis/content}      % Содержание автореферата
 
+\newpage
+\input{Synopsis/summary}      % Резюме
+
 %%% Выходные сведения типографии
 \newpage\thispagestyle{empty}
 
@@ -54,16 +57,16 @@
     \textit{\thesisAuthor}
     \par\medskip
 
-    \thesisTitle
+    \textbf{\thesisTitle}
     \par\medskip
 
-    Автореф. дис. на соискание ученой степени \thesisDegreeShort
+    Автореферат диссертации на соискание ученой степени \par \thesisDegree{} \par по специальности \thesisSpecialtyNumber\ "--- \thesisSpecialtyTitle
     \par\bigskip
 
     Подписано в печать \blank[\widthof{999}].\blank[\widthof{999}].\blank[\widthof{99999}].
     Заказ № \blank[\widthof{999999999999}]
 
-    Формат 60\(\times\)90/16. Усл. печ. л. 1. Тираж 100 экз.
+    Формат 60\(\times\)90/16. Усл. печ. л. \blank[\widthof{999}].  Уч.-изд. л. \blank[\widthof{999}]. Тираж \blank[\widthof{999}] экз.
     %Это не совсем формат А5, но наиболее близкий, подробнее: http://ru.wikipedia.org/w/index.php?oldid=78976454
 
     Типография \blank[0.5\linewidth]
