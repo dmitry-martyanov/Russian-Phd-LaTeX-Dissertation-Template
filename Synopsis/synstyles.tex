@@ -10,7 +10,7 @@
 %% И правит сразу и в таблицах (если со звёздочкой)
 %\DoubleSpacing*     % Двойной интервал
 %\OnehalfSpacing*    % Полуторный интервал
-\SingleSpacing      % Одинарный интервал
+\SingleSpacing*      % Одинарный интервал
 %\setSpacing{1.42}   % Полуторный интервал, подобный Ворду (возможно, стоит включать вместе с предыдущей строкой)
 
 %%% Выравнивание и переносы %%%
@@ -26,6 +26,18 @@
 \clubpenalty=10000      % Запрещаем разрыв страницы после первой строки абзаца
 \widowpenalty=10000     % Запрещаем разрыв страницы после последней строки абзаца
 
+%%% Блок управления параметрами для выравнивания заголовков в тексте %%%
+%\newlength{\otstuplen}
+%\setlength{\otstuplen}{\theotstup\parindent}
+%\ifnumequal{\value{headingalign}}{0}{% выравнивание заголовков в тексте
+	\newcommand{\hdngalign}{\centering}                % по центру
+	\newcommand{\hdngaligni}{}% по центру
+%	\setlength{\otstuplen}{0pt}
+%}{%
+%	\newcommand{\hdngalign}{}                 % по левому краю
+%	\newcommand{\hdngaligni}{\hspace{\otstuplen}}      % по левому краю
+%} % В обоих случаях вроде бы без переноса, как и надо (ГОСТ Р 7.0.11-2011, 5.3.5)
+
 %%% Колонтитулы %%%
 \makeevenhead{plain}{}{\thepage}{}
 \makeoddhead{plain}{}{\thepage}{}
@@ -34,8 +46,13 @@
 \pagestyle{plain}
 
 %%% Размеры заголовков %%%
-\setsecheadstyle{\normalfont\large\bfseries}
-\renewcommand*{\chaptitlefont}{\normalfont\large\bfseries}
+
+
+\setsecheadstyle{\normalfont\large\bfseries\centering\MakeUppercase}  
+%\renewcommand*{\chaptitlefont}{\normalfont\large\bfseries}
+
+\setsubsecheadstyle{\normalfont\bfseries}  
+
 
 %%% Подписи %%%
 \setfloatadjustment{table}{%

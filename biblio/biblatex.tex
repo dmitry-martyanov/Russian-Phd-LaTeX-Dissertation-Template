@@ -205,6 +205,10 @@ sorting=none,% настройка сортировки списка литера
             \step[fieldset=keywords,fieldvalue={,biblioauthorconf},append=true]
         }
         \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
+        	\step[fieldsource=authorconfshort,final=true]
+        	\step[fieldset=keywords,fieldvalue={,biblioauthorconfshort},append=true]
+        }
+        \map[overwrite]{ % записываем информацию о типе публикации в ключевые слова
             \step[fieldsource=authorother,final=true]
             \step[fieldset=keywords,fieldvalue={,biblioauthorother},append=true]
         }
@@ -513,6 +517,12 @@ sorting=none,% настройка сортировки списка литера
         {}
         {\stepcounter{citeauthorconf}}
 
+    \newtotcounter{citeauthorconfshort}
+   \defbibenvironment{countauthorconfshort}
+        {\setcounter{citeauthorconfshort}{0}\renewcommand{\blx@driver}[1]{}}
+        {}
+        {\stepcounter{citeauthorconfshort}}
+
     \newtotcounter{citeauthor}
     \defbibenvironment{countauthor}
         {\setcounter{citeauthor}{0}\renewcommand{\blx@driver}[1]{}}
@@ -557,7 +567,8 @@ sorting=none,% настройка сортировки списка литера
 \makeatother
 
 \defbibheading{nobibheading}{} % пустой заголовок, для подсчёта публикаций с помощью невидимой библиографии
-\defbibheading{pubgroup}{\section*{#1}} % обычный стиль, заголовок-секция
+\defbibheading{pubgroup}{\section*{#1}%\section*{#1}
+} % обычный стиль, заголовок-секция
 \defbibheading{pubsubgroup}{\noindent\textbf{#1}} % для подразделов "по типу источника"
 
 %%%Сортировка списка литературы Русский-Английский (предварительно удалить dissertation.bbl) (начало)
@@ -622,7 +633,8 @@ sorting=none,% настройка сортировки списка литера
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorscopus, title=\bibtitleauthorscopus,resetnumbers=false]% Работы автора, индексируемые Scopus
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorpatent, title=\bibtitleauthorpatent,resetnumbers=false]% Патенты
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorprogram,title=\bibtitleauthorprogram,resetnumbers=false]% Программы для ЭВМ
-    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconf,   title=\bibtitleauthorconf,resetnumbers=false]% Тезисы конференций
+    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconfshort,   title=\bibtitleauthorconfshort,resetnumbers=false]% Тезисы конференций
+    \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconf,   title=\bibtitleauthorconf,resetnumbers=false]% Статьи в сборниках конференций
     \printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorother,  title=\bibtitleauthorother,resetnumbers=false]% Прочие работы автора
 }
 
